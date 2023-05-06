@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shahid Links Posing Format</title>
+
+       <script type="text/javascript">
+    function generateCode() {
+      var anime_imageSrc = document.getElementById("anime_imageSrc").value;
+      var planet_imageSrc = document.getElementById("planet_imageSrc").value;
+      var direct_link = document.getElementById("direct_link").value;
+      var yt_id = document.getElementById("yt_id").value;
+      
+      var htmlCode = '<!--[POST-Start]-->\n';
+htmlCode += '<div class="player"> \n\
+  <div class="imgBx"> \n\
+    <a href="'+ direct_link +'"><img src="'+ anime_imageSrc +'" /></a> \n\
+  </div> \n\
+  <a href="https://www.youtube.com/embed/'+ yt_id +'" class="mediabox"><img  style="width: 350px; height: auto;" src="'+ planet_imageSrc +'"></a> \n\
+  </div>\n';
+htmlCode += '<!--[POST-End]-->\n';
+
+      document.getElementById("codeDisplay").innerHTML = htmlCode;
+      document.getElementById("popupWindow").style.display = "block";   
+     
+    }
+    function copyCode() {
+    var htmlCode = document.getElementById("codeDisplay").innerHTML;
+    var startTag = "<!--[POST-Start]-->";
+    var endTag = "<!--[POST-End]-->";
+    var startIndex = htmlCode.indexOf(startTag);
+    var endIndex = htmlCode.indexOf(endTag) + endTag.length;
+    var codeToCopy = htmlCode.substring(startIndex, endIndex);
+    navigator.clipboard.writeText(codeToCopy);
+    alert("HTML code copied to clipboard!");
+}
+function closePopup() {
+      document.getElementById("popupWindow").style.display = "none";
+    }
+  </script>
+
+
+<style type="text/css">
+    /* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  padding-top: 0px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #3368ff;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding-top: 80px;
+}
+
+.popup-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) { /* Apply styles for screens larger than 768px */
+  input[type="text"] {
+    width: 70%;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  button {
+    margin-bottom: 0;
+  }
+} 
+
+
+
+  </style>
+  </head>
+  <body>
+  <div style="text-align: center;">
+  
+  <label for="anime_imageSrc">Anime ImageSrc:</label><br>
+  <input type="text" id="anime_imageSrc" placeholder="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD_G8eQ1Nn5Y43Ks-xLq6ZxugvISQKFYNYW24SG6rWC1xaZuolvckGbtk-rAEk00FVRUdRWLZUcLsNsETq3hkM-IYQn2uyk6RnI9CsFz6Uc6HqsmzmgYR8_gmgRXHuRTEPXJG-WifJLVfndL5qXCPI90dNkvbE0eCre5Eq0norf5H6ZMKfc5cyb2D1Sg/s1600/my-hero-academia-season-1-i56127.jpg"><br>
+  <br>
+  <label for="direct_link">Anime Direct link:</label><br>
+  <input type="text" id="direct_link" placeholder="https://www.spacetoonlinks.xyz/2022/08/my-hero-academia-s1-arabic-dub.html"><br>
+  <br>
+  <label for="yt_id">Anime Trailer:</label><br>
+  <input type="text" id="yt_id" placeholder="JbH-YDgtb54"><br>
+  <br>
+  <label for="planet_imageSrc">Spacetoon Planet ImageSrc:</label><br>
+  <input type="text" id="planet_imageSrc" placeholder="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB_ngJ-Smdl8FhI6EaeOatnAQnBX8mAQRtxa6KRUcJ3VDWUC2al-7qVRhGJdfh8WQ2LDrQ2KP6SkjKmHUtWedME1zzWFCeOVoeEyK5S169JTe_kLIE4HB9bNpU_jRWRE16u9gZhbjs04mxzw7qn119Jsg4u-O-rlAnruxL9_XgsyE4FUmiwzdp0imU/s858/Montaser%20Arabic%20medium%20%284%29.png"><br>
+  <br>
+<div>
+  <br><br>
+  <button onclick="generateCode()">Generate HTML Code</button>
+  <br><br>
+  <textarea rows="14" cols="150">  Action: 
+    https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB_ngJ-Smdl8FhI6EaeOatnAQnBX8mAQRtxa6KRUcJ3VDWUC2al-7qVRhGJdfh8WQ2LDrQ2KP6SkjKmHUtWedME1zzWFCeOVoeEyK5S169JTe_kLIE4HB9bNpU_jRWRE16u9gZhbjs04mxzw7qn119Jsg4u-O-rlAnruxL9_XgsyE4FUmiwzdp0imU/s858/Montaser%20Arabic%20medium%20%284%29.png 
+  Advanture: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQeZow3SnH1JXoODt0wdZCWD52JAEJjhs8RB3qFHCgpzrhaQ3QCBSA1Mo2Nu-l_nQBSgmi9NMZlG2TCNTs2o__8Zuwi7RccA4h5dmkZZF8WVQRnwS_KAcK50_OAyEvGXBvPCN6JOvtLwJKL8V7EE_wFFlOSTQHWt50-dVX1XQonS9r-L6YuH3aZ9fkCw/s1600/Untitled%20design%20%286%29.png
+   Movie: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi58n9oqdb7oKoezsjIwgjiQEHqHD0nCQgpCeezy41CuO89C2OVYt7ysb-vGNPCxZpc3XMp0BiptcHaiDdJ9Tl-M05M9hfAzbRF8fyPftnUtn-5DN0v2tzFzmobZ4eL0GEQvL26ItEulHnMdJSrGX3Z1WswIuz53rnVrReKQtE6RBVRgZONh-sDVFXhOQ/s1600/Untitled%20design%20%287%29.png
+    Comedy: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGoHGcCQ2TIDLEaZyp4ZLPwNuv6b4jZI857JW53jRGDIm_YqeWSFMVoixVMFKimPmTEJFMoV31HDPz_xPw3w8alnx0j19Gc8lkTC7Jp5QWyo7bsJ3xyYSmPST1fepkT2daWfVhvO36gKdLgFMbiTllmbQRBT8meLck71zj6ANylgqumzWQbkGNhDpSpA/s1600/Untitled%20design%20%288%29.png
+    Sport: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim2iv9pDD2tiCOqikhM0gaCUYF4B4o3DeRIMLfde6oVWeEq3wNgmVL4ni9jrbzm5D8gcq5dX49xgrEhQZX-eN1Jj82boaHaoytlkA59Ar0uNXfMXLK6FEAgIfxRktvVwcG03WPVUe2BB9rzPShhuq8KdK0No2wLquIu4lY1AOXkqQrtHotRXDQydhgJQ/s1600/Untitled%20design%20%289%29.png
+    Abjad: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLvYhzcXE09sO9nL_16LInkHmNkbRw6hgWUcpoG8QTHfoc_sSrXeNBzeshq2vE_81ePUvWpJRfGcOVTdFvW5NurRHc3Q1mKZSitQc_cydpb_tTek0A19Jz_L_suoRB8DN-EhRR24ajnSfh5gNL9xqPh21xjVTiyuwrZ8LITmnajTjAHcoN1Q69zffihQ/s1600/Untitled%20design%20%2810%29.png
+    Science: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjepXSvVLbmemAfyaFXLJZa3crcURE9xGuUxqXt_Es1dR5Zv3sN1gR2NrJiZKqgI6DjFW3Hx7DO9CcwwUI3d_SSMYBO1jvxl2-UfzFIyaRDFW93IxFmIfPg8X3KnxyGf3dKWNGkBviq1TL6PcdZZgLfiyafesBYwfga3alItxFhIQptvEfkM9ygYf_0HA/s1600/Untitled%20design%20%2811%29.png
+    Zumorroda: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOGoOg9C_harLrYbeBAnXMZUaKKz9M4lchAMxfb3jkqEHQStfRJzAlcSBGr9aTjeHzKbo3vUtmYBxOZfJhOC7RxqxVwDllQAMG0WL2Sgff8vxOiuQtyaL_LNrbWaWUwyNVhs5w_pwwmPg4OVzvoyQiZAW6l2djOy_tOhffUA2jrTJXNPpyyZ4ObM7Hrw/s1600/Untitled%20design%20%2812%29.png
+    Bon Bon: 
+    https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9Z5-CvfeZYCyfgBs6Jz-w4O7QFbPTUZUfpjII5y9ZYaETofd9u0KoEWOacKe_Uk8PfyS8XQbhhfSOJX4GnOUJH-gv5eCj2syTBljWXd8rephxLJfpEzs55VUPPRgTJUCagE_ng6vOzR0fSoJCpIm8XZdSJGZJGODJVnqx4KHbTlxHHt16Lh_4NCh_Rg/s1600/Untitled%20design%20%2813%29.png
+    History: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPfhrl2FQqa2pWMsx5130tpAWWGiQZl3_ea0_ACei0r_MvAFomr1rT13jza_WfcncaFip6eBU8YdR7QJJ715ojU2Fyi_UEf5RFG74GYwHOgKVsqpMeU0m9Kvb2McC5Ym5tbhsF2kdRfvq2NXGvlJH-pUc_uoZRJftB34E60sZItJ00D8aj-e3wQ9bBBQ/s1600/Untitled%20design%20%2814%29.png</textarea>
+
+<div class="popup" id="popupWindow">
+  <div class="popup-content">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+    <h2>Generated HTML Code:</h2>
+    <pre id="codeDisplay"></pre>
+    <button onclick="copyCode()">Copy HTML Code</button>
+  </div>
+</div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
